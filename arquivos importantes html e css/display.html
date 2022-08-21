@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        .efeito_mesma_linha{
+            display: inline;
+        }
+        .efeito_bloco{
+            display: block;
+        }
+        .efeito_nao_visivel {
+            display: none;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            
+        }
+        body {
+            font-family: "Open Sans", sans-serif;
+        }
+        ul, li {
+            list-style: none;
+        }
+        .example {
+            color: #fff;
+            text-align: justify;
+        }
+        .example::after{
+            content: '';
+            display: inline-block;
+            width: 100%;
+            height: 0; 
+        }
+        .example-item {
+            width: 25%;
+            height: 150px;
+            display: inline-block;
+        }
+        .example-item-first {
+            background-color: #faa116;
+        }
+        .example-item-second{
+            background-color: #57c7c3;
+        }
+        .example-item-third {
+            background-color: #3b97d3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Estes </h1>
+    <p>elementos não possuem</p>
+    <p>nehnum tipo de</p>
+    <h2>estilo.</h2>
+    <hr>
+    
+    <h1 class="efeito_mesma_linha">Estes</h1>
+    <p class="efeito_mesma_linha">outros elementos</p>
+    <p class="efeito_mesma_linha">possuem estilo</p>
+    <h1 class="efeito_mesma_linha">display: inline</h1>
+    <h1 class="efeito_nao_visivel">JÁ ESTE TEXTO GRANDE NÃO SERÁ EXIBIDO!!!</h1>
+    <hr>
+
+    <label class="efeito_bloco">Buscadores:</label>
+    <a class="efeito_bloco" href="https://www.google.com">Google</a>
+    <a class="efeito_bloco" href="https://www.bing.com">Bing</a>
+    <a class="efeito_bloco" href="https://www.yahoo.com">Yahoo</a>
+    <label class="efeito_bloco">(Elementos com estilo em bloco)</label>
+    <hr>
+
+    <ul class="example">
+        <li class="example-item example-item-first">Primeiro</li>
+        <li class="example-item example-item-second">Segundo</li>
+        <li class="example-item example-item-third">Terceiro</li>
+    </ul>
+
+
+</body>
+</html>

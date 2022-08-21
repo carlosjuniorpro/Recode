@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+    <style>
+        .display {
+            width: 24%;
+            display: inline-block;
+        }
+        .visible {
+            width: 24%;
+            height: 100px;
+            border: 2px solid red;
+            overflow: visible; /* É o valor padrão */
+        }
+        .hidden {
+            width: 24%;
+            height: 100px;
+            border: 2px solid red;
+            overflow: hidden;
+        }
+        .scroll {
+            width: 24%;
+            height: 100px;
+            border: 2px solid red;
+            overflow: scroll; 
+        }
+        .auto {
+            width: 24%;
+            height: 100px;
+            border: 2px solid red;
+            overflow: auto; 
+        }
+        .space{
+            padding-top: 20px;
+        }
+        
+        .alinhar {
+        position: relative;
+        bottom: 58px;
+        }
+     
+    </style>
+    
+</head>
+<body>
+    <h1>
+        Exemplos de Overflow
+    </h1>
+    <h2 class="display">
+        Visible
+    </h2>
+    <h2 class="display">
+        Hidden
+    </h2>
+    <h2 class="display">
+        Scroll
+    </h2>
+    <h2 class="display">
+        Auto
+    </h2>
+
+    <p class="visible display">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, laborum! Optio vel itaque molestiae eius hic eligendi dicta odit praesentium aperiam commodi, reiciendis quis suscipit! Excepturi debitis libero dolore et? Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum repellendus fuga minus ratione unde perferendis inventore modi dolorum dicta officiis praesentium cupiditate vitae, tenetur id eius magnam odio aut culpa.
+    </p>
+    <p class="hidden display alinhar">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nobis, labore pariatur ducimus asperiores incidunt autem nulla harum necessitatibus fugiat cumque hic quibusdam corporis tempore nam doloribus atque, eveniet dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam vero assumenda necessitatibus quisquam laboriosam, reiciendis reprehenderit earum doloremque omnis sint nisi deleniti debitis nam quod! Ipsum ducimus facilis quas ipsam.
+    </p>
+    
+    <p class="scroll display alinhar">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem nisi molestias, ratione velit quo vero molestiae quos ullam perferendis ea maiores earum voluptas non ex placeat delectus et quas iste.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum libero, aut corrupti eligendi voluptatibus culpa aliquam sed laborum at doloremque. Delectus dolorum eveniet eos deleniti ducimus maxime voluptatibus quam ab.
+    </p>
+
+    <p class="auto display alinhar">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, ducimus rerum. Facere quidem, quasi at laboriosam est blanditiis cum modi sunt similique expedita vero perspiciatis id consequatur! Laborum, iusto quo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus corporis dicta, sapiente quae officia velit nihil iusto modi placeat praesentium odio atque repudiandae doloribus illo facere ex ipsam veritatis sequi?
+    </p>
+    
+</body>
+</html>
