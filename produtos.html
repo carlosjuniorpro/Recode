@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Produtos - Full Stack Eletro</title>
         <link rel="stylesheet" href="css/estilo.css">
+        <script src="javascript/funcoes.js"></script>
         <style>
             .divide_tela_em_duas {
                 display: flex;
@@ -23,6 +24,9 @@
             }
             .produtos {
                 width: 80%;
+            }
+            li{
+                cursor: pointer;
             }
             
         </style>
@@ -47,15 +51,16 @@
             <aside class="">
                 <h3>Categoria</h3>
                 <ul>
-                    <li>Geladeiras (3)</li>
-                    <li>Fogões (2)</li>
-                    <li>Micro-ondas (3)</li>
-                    <li>Lavadoura de roupas (2)</li>
-                    <li>Lava louças (2)</li>
+                    <li onclick="exibir_todos()">Todos (12)</li>
+                    <li onclick="exibir_categoria('geladeira')">Geladeiras (3)</li>
+                    <li onclick="exibir_categoria('fogao')">Fogões (2)</li>
+                    <li onclick="exibir_categoria('microondas')">Micro-ondas (3)</li>
+                    <li onclick="exibir_categoria('lavaroupa')">Lavadoura de roupas (2)</li>
+                    <li onclick="exibir_categoria('lavaloucas')">Lava louças (2)</li>
                 </ul>
             </aside>
             <section class="produtos">
-                <section class="float_left">
+                <section class="float_left" id="geladeira">
                     <img src="imagens/geladeirag.jpeg" alt="Geladeira" width="50%">
                         <p style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; margin-bottom: 0px;" >
                             Geladeira Frost Free Consul Side Inverse 540lt
@@ -65,7 +70,7 @@
                         <p style="font-family: Arial, Helvetica, sans-serif; font-size: 24px; color: red; margin-top: 0px;">R$ 5.019,00</p>
                 </section>
 
-                <section class="float_left">
+                <section class="float_left" id="geladeira">
                     <img src="imagens/geladeirainoxg.jpeg" alt="Geladeira" width="50%">
                         <p style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; margin-bottom: 0px;" >
                             Geladeira Inox Consul 720 litros
@@ -75,7 +80,7 @@
                         <p style="font-family: Arial, Helvetica, sans-serif; font-size: 24px; color: red; margin-top: 0px;">R$ 7.738,00</p>
                 </section>
 
-                <section class="float_left">
+                <section class="float_left" id="geladeira">
                     <img src="imagens/sideby.jpeg" alt="Geladeira" width="50%">
                         <p style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; margin-bottom: 0px;" >
                             Refrigerador Sideby Inox Consul 980 litros
@@ -85,7 +90,7 @@
                         <p style="font-family: Arial, Helvetica, sans-serif; font-size: 24px; color: red; margin-top: 0px;">R$ 16.810,00</p>
                 </section>                       
                 
-                <section class="float_left">
+                <section class="float_left" id="fogao">
                     <img src="imagens/fogaobco.jpeg" alt="Fogão" width="50%">
                         <p style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; margin-bottom: 0px;" >
                             Fogão Brastemp Branco 4 Bocas
@@ -95,7 +100,7 @@
                         <p style="font-family: Arial, Helvetica, sans-serif; font-size: 24px; color: red; margin-top: 0px;">R$ 520,00</p>
                 </section>
 
-                <section class="float_left">
+                <section class="float_left" id="fogao">
                 <img src="imagens/fogaoinox.jpeg" alt="Fogão" width="50%">
                     <p style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; margin-bottom: 0px;" >
                         Fogão 4 Bocas Brastemp Inox
@@ -105,7 +110,7 @@
                     <p style="font-family: Arial, Helvetica, sans-serif; font-size: 24px; color: red; margin-top: 0px;">R$ 799,00</p>
                 </section>                       
                 
-                <section class="float_left">
+                <section class="float_left" id="microondas">
                 <img src="imagens/microbco.jpeg" alt="Micro-ondas" width="37.5%">
                     <p style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; margin-bottom: 0px;" >
                         Micro-ondas Branco Consul
@@ -116,7 +121,7 @@
                 </section>                       
                 
                 
-                <section class="float_left">
+                <section class="float_left" id="microondas">
                     <img src="imagens/microinox.jpg" alt="Micro-ondas" width="42.7%">
                     <p style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; margin-bottom: 0px;" >
                            Micro-ondas Brastemp Inox
@@ -127,7 +132,7 @@
                 </section>                       
                
                 
-                <section class="float_left">
+                <section class="float_left" id="microondas">
                     <img src="imagens/microinoxepreto.jpg" alt="Micro-ondas" width="37.5%">
                     <p style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; margin-bottom: 0px;" >
                         Micro-ondas Brastemp Preto
@@ -138,7 +143,7 @@
                 </section>
             
             
-                <section class="float_left">
+                <section class="float_left" id="lavaroupa">
                     <img src="imagens/lavadora1.jpeg" alt="Lava Roupa" width="50%">
                     <p style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; margin-bottom: 0px;" >
                         Lavadoura de Roupas Brastemp 7 litros Branca
@@ -149,7 +154,7 @@
                 </section>
                 
                 
-                <section class="float_left">
+                <section class="float_left" id="lavaroupa">
                     <img src="imagens/lavaroupa.jpeg" alt="Lava Roupa" width="50%">
                     <p style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; margin-bottom: 0px;" >
                         Lavadoura de Roupas Brastemp 15 litros Branca
@@ -159,7 +164,7 @@
                     <p style="font-family: Arial, Helvetica, sans-serif; font-size: 24px; color: red; margin-top: 0px;">R$ 3.999,00</p>
                 </section>                       
                 
-                <section class="float_left">
+                <section class="float_left" id="lavaloucas">
                     <img src="imagens/lavaloucas.jpeg" alt="Lava Louça" width="69%">
                     <p style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; margin-bottom: 0px;" >
                         Lava louças Brastemp Inox
@@ -170,7 +175,7 @@
                 </section>                       
                 
                 
-                <section class="float_left">
+                <section class="float_left" id="lavaloucas">
                     <img src="imagens/lavaloucasbranco.jpeg" alt="Lava Louça" width="64.5%">
                     <p style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; margin-bottom: 0px;" >
                         Lava Louça Brastemp Branca
